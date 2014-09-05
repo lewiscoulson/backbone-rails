@@ -1,0 +1,41 @@
+<div id="wrap">
+  <div id="header-region"></div>
+  <div id="main-region" class="container"></div>
+  <div id="push"></div>
+</div>
+<div id="footer-region"></div>
+
+<%= javascript_tag do %>
+  $(function() {
+    _.templateSettings = {
+      interpolate : /\{\{=(.+?)\}\}/g,
+      escape : /\{\{-(.+?)\}\}/g,
+      evaluate: /\{\{(.+?)\}\}/g,
+    };
+    Demo.start();
+
+  });
+<% end %>
+
+<script id="headers-template" type="text/html">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="row">
+        <div class="pull-left">
+          <span class="brand">BackboneRails Demo</span>
+        </div>
+        <ul class="nav navbar-nav pull-right"></ul>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="header-template" type="text/html">
+  <a href=''>{{= name }}</a>
+</script>
+
+<script id="footer-show-template" type="text/html">
+  <div class="container">
+    <p>footer content</p>
+  </div>
+</script>
