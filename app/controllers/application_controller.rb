@@ -4,5 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+  	@users = User.all
+  	gon.rabl "app/views/users/index.json.rabl", as: "users"
   end
 end

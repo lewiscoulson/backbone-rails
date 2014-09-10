@@ -2,6 +2,8 @@
   this.Demo = (function(Backbone, Marionette){
     var APP = new Marionette.Application();
 
+    APP.routeRoute = 'users';
+
     APP.addRegions({
       headerRegion: '#header-region',
       mainRegion: '#main-region',
@@ -13,11 +15,21 @@
       APP.module('FooterApp').start();
     });
 
-    APP.on("initialize:after", function(){
+    APP.on("start", function(){
       if (Backbone.history) {
         Backbone.history.start();
+
+        APP.getCurrentRoute() == '' ? APP.navigate(APP.routeRoute, {trigger: true}) : '';
       }
     });
+
+    APP.navigate = function(route, options) {
+      Backbone.history.navigate(route, options);
+    };
+
+    APP.getCurrentRoute = function() {
+      return Backbone.history.fragment;
+    }
 
     return APP;
   }(Backbone, Marionette));
