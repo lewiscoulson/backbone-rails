@@ -1,4 +1,4 @@
-Demo.module("HeaderApp.List", function(List, APP, Backbone, Marionette, $, _){
+APP.module("HeaderApp.List", function(List, APP, Backbone, Marionette, $, _){
   function getHeaderView(links) {
     return new List.Headers({
       collection: links

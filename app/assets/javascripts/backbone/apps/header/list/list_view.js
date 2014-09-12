@@ -1,4 +1,4 @@
-Demo.module("HeaderApp.List", function(List, APP, Backbone, Marionette, $, _){
+APP.module("HeaderApp.List", function(List, APP, Backbone, Marionette, $, _){
   List.Header = Backbone.Marionette.ItemView.extend({
     template: '#header-template',
     tagName: 'li'

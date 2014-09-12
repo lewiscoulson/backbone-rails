@@ -1,4 +1,4 @@
-Demo.module("FooterApp", function(FooterApp, APP, Backbone, Marionette, $, _){
+APP.module("FooterApp", function(FooterApp, APP, Backbone, Marionette, $, _){
   this.startWithParent = false;
 
   var API = {

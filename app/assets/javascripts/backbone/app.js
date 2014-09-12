@@ -1,8 +1,8 @@
 (function() {
-  this.Demo = (function(Backbone, Marionette){
+  this.APP = (function(Backbone, Marionette){
     var APP = new Marionette.Application();
 
-    APP.routeRoute = 'users';
+    APP.routeRoute = 'projects';
 
     APP.addRegions({
       headerRegion: '#header-region',

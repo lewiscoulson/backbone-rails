@@ -1,4 +1,4 @@
-Demo.module("Entities", function(Entities, APP, Backbone, Marionette, $, _){
+APP.module("Entities", function(Entities, APP, Backbone, Marionette, $, _){
   Entities.Header = Entities.Model.extend({
 
   });
@@ -10,9 +10,9 @@ Demo.module("Entities", function(Entities, APP, Backbone, Marionette, $, _){
   var API = {
     getHeaders: function() {
       return new Entities.HeaderCollection([
-        {name: 'users'},
-        {name: 'leads'},
-        {name: 'appointments'}
+        {name: 'projects'},
+        {name: 'about'},
+        {name: 'contact'}
       ]);
     }
   };

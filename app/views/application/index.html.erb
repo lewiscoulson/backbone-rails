@@ -12,7 +12,7 @@
       escape : /\{\{-(.+?)\}\}/g,
       evaluate: /\{\{(.+?)\}\}/g,
     };
-    Demo.start();
+    APP.start();
 
   });
 <% end %>
@@ -22,7 +22,7 @@
     <div class="container">
       <div class="row">
         <div class="pull-left">
-          <span class="brand">BackboneRails Demo</span>
+          <span class="brand">Portfolio</span>
         </div>
         <ul class="nav navbar-nav pull-right"></ul>
       </div>
@@ -40,32 +40,33 @@
   </div>
 </script>
 
-<script id="list-layout-template" type="text/html">
+<script id="show-projects-layout-template" type="text/html">
   <div id="panel-region"></div>
-  <div id="users-region"></div>
+  <div id="projects-region"></div>
 </script>
 
-<script id="list-panel-template" type="text/html">
+<script id="show-panel-template" type="text/html">
   Total Users: {{= items.length }}
 </script>
 
-<script id="list-user-template" type="text/html">
-  <td>{{= full_name }}</td>
-  <td>{{= created_at }}</td>
+<script id="show-project-template" type="text/html">
+  <a href="#projects/{{= id }}">{{= name }} - {{= brand }}</a>
 </script>
 
-<script id="list-users-template" type="text/html">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>User</th>
-        <th>Created at</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+<script id="show-project-detail-template" type="text/html">
+  <a href="#projects">Back to projects</a>
+  <h2>{{= name }}</h2>
+  <h3>{{= brand }}</h3>
 </script>
 
-<script id="list-leads-template" type="text/html">
-  leads
+<script id="show-projects-template" type="text/html">
+  <div class="projects"></div>
+</script>
+
+<script id="list-about-template" type="text/html">
+  about
+</script>
+
+<script id="list-contact-template" type="text/html">
+  contact
 </script>
