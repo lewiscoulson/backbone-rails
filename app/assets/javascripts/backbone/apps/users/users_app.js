@@ -3,7 +3,7 @@ Demo.module("UsersApp", function(UsersApp, APP, Backbone, Marionette, $, _){
   	appRoutes: {
 	    "users": "listUsers"
 	  }
-  }); 
+  });
 
   var API = {
   	listUsers: function() {

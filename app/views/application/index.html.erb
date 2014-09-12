@@ -31,11 +31,41 @@
 </script>
 
 <script id="header-template" type="text/html">
-  <a href=''>{{= name }}</a>
+  <a href='#{{= name }}'>{{= name }}</a>
 </script>
 
 <script id="footer-show-template" type="text/html">
   <div class="container">
     <p>footer content</p>
   </div>
+</script>
+
+<script id="list-layout-template" type="text/html">
+  <div id="panel-region"></div>
+  <div id="users-region"></div>
+</script>
+
+<script id="list-panel-template" type="text/html">
+  Total Users: {{= items.length }}
+</script>
+
+<script id="list-user-template" type="text/html">
+  <td>{{= full_name }}</td>
+  <td>{{= created_at }}</td>
+</script>
+
+<script id="list-users-template" type="text/html">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Created at</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</script>
+
+<script id="list-leads-template" type="text/html">
+  leads
 </script>

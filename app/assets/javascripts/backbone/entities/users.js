@@ -9,14 +9,18 @@ Demo.module("Entities", function(Entities, APP, Backbone, Marionette, $, _){
   });
 
   var API = {
-    getUserEntities: function() {
+    getUserEntities: function(cb) {
       var users = new Entities.UsersCollection();
-      users.fetch();
+      users.fetch({
+        success: function() {
+          cb(users);
+        }
+      });
       return users;
     }
   };
 
-  APP.reqres.setHandler('user:entities', function() {
-    return API.getUserEntities();
+  APP.reqres.setHandler('user:entities',  function(cb) {
+    API.getUserEntities(cb);
   });
 });
